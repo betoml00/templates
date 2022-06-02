@@ -1,0 +1,106 @@
+\documentclass[10pt, landscape]{article}
+\usepackage[spanish, es-noshorthands]{babel}
+\decimalpoint
+\usepackage{amssymb,amsmath,amsthm,amsfonts}           % Paquetes de matemáticas
+\usepackage{multicol,multirow}                         % Varias columnas
+\usepackage[margin=1cm, top=1cm, landscape]{geometry}  % Márgenes
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}                                  % Headers
+\usepackage{centernot}
+
+% ---- GRÁFICAS ----
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}                   % Mejores flechas
+\usetikzlibrary{shadows}                                % Sombras
+\usetikzlibrary{external}                               % ¿?
+\usetikzlibrary{decorations.pathreplacing,calligraphy}  % Para poder graficar el '{'
+% Plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}                             % Ancho de las gráficas: width=6.5cm,
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+% ---- COLORES ----
+\usepackage{xcolor}
+\definecolor{miAzul}{RGB}{13, 33, 161}
+\definecolor{miRojo}{RGB}{186, 24, 27}
+
+% ---- FORMATO DE TÍTULOS ----
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\large\bfseries}{}{0mm}{}
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries}{}{0mm}{}
+\titleformat{\subsubsection}
+{\normalfont\small\bfseries}{}{0mm}{}  
+\titlespacing{\section}{0pt}{*0.5}{*0.0}
+\titlespacing{\subsection}{0pt}{*0.5}{*0.0}
+\titlespacing{\subsubsection}{0pt}{*0.5}{*0.0}
+
+% ---- FORMATO DE LISTAS ----
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, nosep}
+
+\title{}
+\pagenumbering{gobble}                                   % Quitar número de la página
+
+% ---- FORMATO DE PÁRRAFOS ----
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.4em}
+
+% ---- TEXTO DE RELLENO ----
+\usepackage{lipsum}  
+
+\begin{document}
+
+\footnotesize
+
+\begin{center}
+     \Large{\textbf{Título del documento}} \\
+\end{center}
+
+\begin{multicols*}{3}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setlength{\abovedisplayskip}{0.25em}
+\setlength{\belowdisplayskip}{0.25em}
+\setlength{\abovedisplayshortskip}{0.25em}
+\setlength{\belowdisplayshortskip}{0.25em}
+
+%%%%%% TEXTO AQUÍ %%%%%%
+% Quitar  lo que está aquí. Nada más es para el ejemplo
+
+\section{Sección 1}
+\lipsum[1-3]
+
+\section{Sección 2}
+\lipsum[4-6]
+
+\subsection{Subsección 2.1}
+\lipsum[7-8]
+
+\[ f_X(x) = \frac{x^{\alpha - 1} e^{-\frac{x}{\beta}}}{\beta^\alpha \Gamma(\alpha)} \mathbb{I}_{\mathbb{R^{+}}}(x) \]
+
+\lipsum[9]
+
+\section{Sección 3}
+\lipsum[10-14]
+
+%%%%%% FIN DEL TEXTO %%%%%%
+
+\vfill
+\begin{flushright}
+    \rule{0.65\linewidth}{0.1pt} \\
+    José Alberto Márquez Luján
+\end{flushright}
+
+\end{multicols*}
+
+\end{document}
