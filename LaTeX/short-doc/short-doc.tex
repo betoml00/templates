@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-noshorthands]{babel}
+\decimalpoint
+\usepackage{amssymb,amsmath,amsthm,amsfonts,mathtools}
+\usepackage{tcolorbox}
+\usepackage{microtype}
+
+% ---- LINKS ----
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
+
+% ---- IMÁGENES ----
+\usepackage{graphicx}
+\graphicspath{ {imgs/} }
+
+% ---- FORMATO DE TÍTULOS ----
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{1em plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{1em plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing{\subsubsection}{0pt}{1em plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+% ---- FORMATO DE LISTAS ----
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-0.5em} % es media m para compensar
+\setlist[enumerate]{topsep=-0.5em}
+
+% ---- GRÁFICAS ----
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}                   % Mejores flechas
+\usetikzlibrary{shadows}                                % Sombras
+\usetikzlibrary{external}                               % ¿?
+\usetikzlibrary{decorations.pathreplacing,calligraphy}  % Para poder graficar el '{'
+% Plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}                             % Ancho de las gráficas: width=6.5cm,
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+% ---- COLORES ----
+\usepackage{xcolor}
+\definecolor{miAzul}{RGB}{13, 33, 161}
+\definecolor{miRojo}{RGB}{186, 24, 27}
+
+% ---- FORMATO DE LAS PÁGINAS ----
+\usepackage[a4paper, width=165mm, top=20mm, bottom = 20mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% Primera página. Comentar si se quiere que todas sean iguales
+\fancypagestyle{firststyle}{
+   \fancyhf{}
+   \fancyfoot[R]{\footnotesize \thepage}
+   \renewcommand{\headrulewidth}{0pt}
+}
+% Para el resto del documento.
+\fancyhf{}
+\lhead{\footnotesize Subtítulo}
+\chead{\footnotesize \textbf{Título}}
+\rhead{\footnotesize \today}
+\lfoot{\footnotesize J. Alberto Márquez L.}
+\cfoot{\footnotesize \textsc{La Materia}}
+\rfoot{\footnotesize \thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0cm}
+
+% ---- TEXTO DE RELLENO ----
+\usepackage{lipsum}  
+
+\title{
+    La Materia \\
+    \large Título
+}
+\author{José Alberto Márquez Luján, 187917}
+\date{\today}
+
+\begin{document}
+% Si se quiere que todas las páginas sean iguales, comentar las siguientes dos líneas.
+\maketitle
+\thispagestyle{firststyle}
+
+%%%%%% TEXTO AQUÍ %%%%%%
+% Quitar  lo que está aquí. Nada más es para el ejemplo
+
+\section{Sección 1}
+\lipsum[1-3]
+
+\section{Sección 2}
+\lipsum[4-6]
+
+\subsection{Subsección 2.1}
+\lipsum[7-8]
+
+\textbf{Teorema.} Sea $(X,d)$ un espacio métrico y $K \subset X$ compacto. Para $\mathcal{F}$ un subconjunto de $C(K)$, son equivalentes:
+\begin{itemize}
+    \item[a)] $\mathcal{F}$ es uniformememente acotado y uniformememente equicontinuo en $K$.
+    \item[b)] Toda sucesión de elementos en $\mathcal{F}$ tiene una subsucesión que es uniformememente convergente en $K$.
+\end{itemize}
+
+\lipsum[9]
+
+\section{Sección 3}
+\lipsum[10-14]
+
+%%%%%% FIN DEL TEXTO %%%%%%
+
+\end{document}
